@@ -151,7 +151,9 @@ def load_page(number):
             stack_length += len(tc)
 
             if e.getchildren():
-                links.append(e.getchildren()[0].attrib['href'].strip('\/\\'))
+                l = e.getchildren()[0].attrib['href'].strip('\/\\')
+                if not l.startswith('0'):
+                    links.append(l)
 
             stack.append((e.attrib['class'], tc))
 
