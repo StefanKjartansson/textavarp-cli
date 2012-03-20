@@ -7,6 +7,8 @@ from pyquery import PyQuery as pq
 import requests
 
 
+urwid.set_encoding('utf-8')
+
 BASE_URL = 'http://www.textavarp.is/%d/'
 WIDTH = 40
 START_PAGE = 100
