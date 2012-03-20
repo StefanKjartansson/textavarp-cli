@@ -6,7 +6,9 @@ try:
 except ImportError:
     from distutils.core import setup, find_packages
 
+
 NAME = 'textavarp'
+
 
 setup(
     name = NAME,
@@ -15,6 +17,7 @@ setup(
     install_requires = [
         'requests',
         'urwid',
+        'pyquery',
     ],
     author="Stefan Kjartansson",
     author_email="esteban.supreme@gmail.com",
