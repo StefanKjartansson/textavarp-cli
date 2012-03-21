@@ -22,7 +22,7 @@ setup(
     author="Stefan Kjartansson",
     author_email="esteban.supreme@gmail.com",
     description="Textavarp",
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
