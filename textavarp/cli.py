@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8
 
+import sys
+
+py3K = (sys.version_info[0] == 3)
+
 import urwid
 
 from pyquery import PyQuery as pq
@@ -127,7 +131,8 @@ class MenuItem(urwid.Text):
 
 
 def get_page_content(number):
-    return pq(requests.get(BASE_URL % number).content)('pre.vt')
+    r = requests.get(BASE_URL % number)
+    return pq(r.text if py3K else r.content)('pre.vt')
 
 
 def load_page(number):
